@@ -1,0 +1,72 @@
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.sent {
+  align-self: flex-end;
+}
+
+.received {
+  align-self: flex-start;
+}
+
+.message {
+  background-color: rgb(88, 153, 228);
+  padding: 8px;
+  border-radius: 12px;
+  color: white;
+}
+
+.received .message {
+  background-color: rgb(56, 60, 150);
+}
+
+/* IMAGE */
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  max-width: 250px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: filter 0.25s ease, opacity 0.2s ease;
+}
+
+.blur {
+  filter: blur(6px);
+  transform: scale(1.05);
+}
+
+.sendingOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.time {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 2px;
+  align-self: flex-end;
+}

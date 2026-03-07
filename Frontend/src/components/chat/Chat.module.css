@@ -1,0 +1,142 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: rgb(82, 88, 189);
+  color: #fff;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.backButton {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contactName {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.lastSeen {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.iconButton {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Messages */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Input */
+.inputWrapper {
+  display: flex;
+  padding: 8px;
+  background: rgb(189, 217, 248);
+  align-items: center;
+  gap: 8px;
+}
+
+.inputWrapper input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid rgb(151, 149, 149);
+  color: black;
+}
+.inputWrapper .iconCircle {
+  background: rgb(56, 60, 150);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+  font-size: 20px; /* this controls the size of react-icons */
+  cursor: pointer;
+  display: flex;
+  align-items: center;  /* vertically center the icon */
+  justify-content: center; /* horizontally center the icon */
+}
+
+.inputWrapper .iconCircle > * {
+  display: block; /* removes any inline spacing React Icons may inherit */
+}
+
+.previewContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+}
+
+.previewImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.removePreview {
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* Mobile back button */
+@media (max-width: 768px) {
+  .backButton {
+    display: inline-flex;
+  }
+}

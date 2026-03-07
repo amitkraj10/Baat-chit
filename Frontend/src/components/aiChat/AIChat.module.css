@@ -1,0 +1,168 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: rgb(82, 88, 189);
+  color: #fff;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.backButton {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* ===== AI PROFILE IMAGE (META STYLE) ===== */
+
+.profileImage {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 5px;
+
+  /* Gradient animated border */
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff,
+    #8e2de2,
+    #4a00e0
+  );
+  background-size: 300% 300%;
+  animation: aiBorderFlow 6s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover glow */
+.profileImage:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.6);
+}
+
+/* Gradient animation */
+@keyframes aiBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Contact info */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactName {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.lastSeen {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ================= MESSAGES ================= */
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* User message */
+
+.userMessage {
+  align-self: flex-end;
+  background: rgb(56, 60, 150);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 16px 16px 0 16px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+/* AI message */
+
+.aiMessage {
+  align-self: flex-start;
+  background: rgb(230, 230, 230);
+  color: black;
+  padding: 8px 12px;
+  border-radius: 16px 16px 16px 0;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+/* ================= INPUT ================= */
+
+.inputWrapper {
+  display: flex;
+  padding: 8px;
+  background: rgb(189, 217, 248);
+  align-items: center;
+  gap: 8px;
+}
+
+.inputWrapper input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid rgb(151, 149, 149);
+  outline: none;
+}
+
+.iconCircle {
+  background: rgb(56, 60, 150);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .backButton {
+    display: inline-flex;
+  }
+}

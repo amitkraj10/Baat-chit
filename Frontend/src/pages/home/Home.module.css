@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: white; 
+}
+
+.sidebarWrapper {
+  flex: 0 0 320px;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  z-index: 20;
+}
+
+.chatWrapper {
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  background: rgb(56,60,150);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebarWrapper,
+  .chatWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebarWrapper.hideOnMobile {
+    transform: translateX(-100%);
+  }
+
+  .chatWrapper.hideOnMobile {
+    transform: translateX(100%);
+    display: none;
+  }
+}

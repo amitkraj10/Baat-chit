@@ -1,0 +1,173 @@
+.sidebar {
+  height: 100%;
+  background: rgb(242, 246, 251);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top */
+.topSection {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+/* Profile */
+.profileWrapper {
+  position: relative;
+}
+
+.profileButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  width: 130px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background: #f2f2f2;
+}
+
+/* Contacts */
+.contactsSection {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+}
+
+.contactsTitle {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  border-top: 1px solid rgb(200, 200, 200);
+}
+
+.contactItem:hover {
+  background: rgb(162, 200, 241);
+}
+
+.selected {
+  background-color: rgb(82, 88, 189);
+  color: white;
+}
+.contactName {
+  font-weight: 500;
+}
+
+.aiAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4f46e5; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.6);
+}
+
+/* Wrap avatar to position online dot */
+.avatarWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* Online status dot */
+.onlineDot {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #4caf50; 
+  border: 2px solid white; 
+  border-radius: 50%;
+}
+
+.unreadBadge {
+  background-color: rgb(82, 88, 189); /* red like WhatsApp */
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: auto; /* pushes it to the far right */
+}
+
+/* ===================== */
+/* Sidebar Bottom Nav */
+/* ===================== */
+
+.bottomNav {
+  margin-top: auto; /* push to bottom */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  color: rgb(82, 88, 189);
+}
+
+.navItem svg {
+  font-size: 20px;
+}

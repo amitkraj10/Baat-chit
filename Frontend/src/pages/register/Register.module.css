@@ -1,0 +1,178 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 16px;
+  background: white;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  /* background: radial-gradient(circle, #48dbfb 17%, #1dd1a1 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; */
+  font-weight: bold;
+  color:  rgb(82, 88, 189);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgb(160, 164, 248);
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.3);
+}
+
+.inputFile {
+  padding: 6px 0;
+  color: rgb(131, 131, 131);
+  border-radius: 5px;
+  border: 1px solid rgb(209, 209, 209);
+}
+
+.previewWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid rgb(160, 164, 248);
+}
+
+.button {
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color:rgb(82, 88, 189);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(160, 164, 248);
+}
+
+/* Footer */
+.footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.loginLink {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input,
+  .inputFile {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .preview {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer,
+  .loginLink {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    padding: 35px 25px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .input,
+  .inputFile {
+    font-size: 14px;
+    padding: 9px 11px;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 11px;
+  }
+
+  .preview {
+    width: 70px;
+    height: 70px;
+  }
+}
